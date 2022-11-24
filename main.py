@@ -30,7 +30,8 @@ class Example(QMainWindow):
         self.repaint()
 
     def draw(self, qp):
-        qp.setBrush(QColor('yellow'))
+        r, g, b = random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)
+        qp.setBrush(QColor(r, g, b))
         qp.drawEllipse(random.randint(10, 500), random.randint(10, 500),
                        random.randint(10, 500), random.randint(10, 500))
         self.do_paint = False
